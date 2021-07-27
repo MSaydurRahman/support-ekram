@@ -1,0 +1,148 @@
+/* common utilities */
+body{
+    background-color: rgba(231, 222, 222, 0.267);
+}
+/* navbar */
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around; 
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.logo-heading{
+    display: flex;
+    align-items: center;
+    padding-right: 50%;
+    padding-bottom: 1%;
+
+}
+.logo img{
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 5px;
+    width: 50px;
+    justify-content: center;
+}
+.heding{
+    display: flex;
+    color:rgba(115, 11, 251, 0.931);
+    padding: 5px;
+    justify-content: center;
+}
+.heding:hover{
+    transform: scale(1) translateY(10px);
+    transition: transform 2s ease-in-out;
+}
+.common-links a{
+    text-decoration: none;
+}
+/* mid  */
+.mid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; 
+    align-items: baseline;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    background-color: white;
+}
+
+/* vertivcal-navigation */
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+    padding-right: 5px;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none;     /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: rgba(168, 11, 11, 0.308); /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: white;
+  }
+  .main-content{
+    border: 1px solid rgba(128, 128, 128, 0.103);
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+  }
+
+/* promotions */
+  .coupon {
+    width: 15%;
+    border-radius: 15px; /* Rounded border */
+    margin-top: 20px;
+    padding-left: 5px;
+  }
+  .coupon:hover{
+    transform: scale(1) translateY(30px);
+
+    /*or--skew(30deg)*/
+    transition: transform 2s ease-in-out;
+  }
+  
+  .container {
+    padding: 2px 16px;
+    background-color:#04AA6D;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  
+  .expire {
+    color: red;
+  }
+  h3{
+    color:white;
+  }
+  .para-color{
+      color: white;
+  }
+  /* footer  */
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 30px;
+    background-color: rgba(255, 166, 0, 0.246);
+  }
+  @media only screen and (max-width:688px) {
+   
+    .nav{
+       grid-template-columns: repeat(1,1fr);
+       flex-direction: row;
+   }
+   .mid .nav{
+       width: 100%;
+   }
+   .mid{
+       grid-template-columns: repeat(1,1fr);
+   }
+   .links-search .coupon{
+       flex-direction: column;
+   }
+}
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px){
+   .nav .mid{
+       grid-template-columns: repeat(2,1fr);
+   }
+   
+}
