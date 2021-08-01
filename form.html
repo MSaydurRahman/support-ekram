@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using HTML,CSS,JavaScript</title>
+    <style>
+        input[type="text"] {
+            color: gray;
+        }
+
+        input[type="password"] {
+            color: gray;
+        }
+
+        input[type="tel"] {
+            color: gray;
+        }
+
+        input[type="submit"] {
+            width: 97px;
+            height: 37px;
+            position: relative;
+            left: 180px;
+            color: white;
+            background-color: orange;
+            font-weight: bold;
+            border: orangered;
+            border-radius: 5px;
+        }
+
+        input:hover[type="submit"] {
+            color: orangered;
+        }
+
+        td {
+            padding: 10px;
+            color: orangered;
+            font-weight: bolder;
+        }
+
+
+        fieldset {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-width: 5px;
+            color: orange;
+        }
+    </style>
+    <script type="text/javascript">
+        // Function to check Whether both passwords is same or not.
+        function checkPassword(form) {
+            password1 = form.password1.value;
+            password2 = form.password2.value;
+
+            // If password not entered
+            if (password1 == '')
+                alert("Please enter Password");
+
+            // If confirm password not entered
+            else if (password2 == '')
+                alert("Please enter confirm password");
+
+            // If Not same return False.    
+            else if (password1 != password2) {
+                alert("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            else {
+                alert("Password Match")
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="return checkpassword(this)">
+        <fieldset>
+            <legend>
+                <h1>Form Validation</h1>
+            </legend>
+
+            <table>
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td>
+                        <input type="text" name="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Username: </label></td>
+                    <td>
+                        <input type="text" name="uname" required>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td><label>Password: </label></td>
+                    <td>
+                        <input type="password" name="password1" minlength="8" maxlength="32" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label>Re-type password: </label></td>
+                    <td>
+
+                        <input type="password" name="password2" minlength="8" maxlength="32" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label>Gender: </label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male" checked>Male
+                        <input type="radio" name="gender" value="femele">Female
+                        <input type="radio" name="gender" value="other">Other
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Programming skills: </label></td>
+                    <td>
+                        <input type="checkbox" name="skill" value="java">Java
+                        <input type="checkbox" name="skill" value="android">Android
+                        <input type="checkbox" name="skill" value="ruby">Ruby
+                        <input type="checkbox" name="skill" value="net">.Net
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Contact no: </label></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Email Id: </label></td>
+                    <td>
+                        <input type="text" name="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>College: </label></td>
+                    <td>
+                        <select name="college">
+                            <option value="select college">select college</option>
+                            <option value="college1">college 1</option>
+                            <option value="college2">college 2</option>
+                            <option value="college3">college 3</option>
+                            <option value="college4">college 4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+    </form>
+    </fieldset>
+</body>
+
+</html>
